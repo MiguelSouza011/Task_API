@@ -27,9 +27,17 @@ public class TaskController {
         return ResponseEntity.ok(taskService.findAll());
     }
 
-    @DeleteMapping
+    @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteTask(@PathVariable Integer id) {
         taskService.deleteTask(id);
         return ResponseEntity.ok().build();
+    }
+
+    @PatchMapping("/{id}/complete")
+    public ResponseEntity<Task> complete(@PathVariable Integer id) {
+
+        Task task = taskService.complete(id);
+
+        return ResponseEntity.ok(task);
     }
 }
