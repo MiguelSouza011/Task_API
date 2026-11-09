@@ -10,7 +10,7 @@ O projeto foi desenvolvido com o objetivo de praticar e aplicar conceitos de des
 * Spring Boot 4.1.1
 * Spring Data JPA
 * Spring Web MVC
-* H2 Database
+* PostgreSQL
 * Lombok
 * Maven
 
